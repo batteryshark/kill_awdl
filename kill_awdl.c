@@ -40,6 +40,13 @@ int main() {
   }
 
   while (1) {
+    // Check for pause file
+    if (access("/tmp/kill_awdl_pause", F_OK) == 0) {
+      // If file exists, wait and continue (don't kill)
+      nanosleep(&ts, NULL);
+      continue;
+    }
+
     memset(&ifr, 0, sizeof(ifr));
     strncpy(ifr.ifr_name, INTERFACE_NAME, IFNAMSIZ);
 

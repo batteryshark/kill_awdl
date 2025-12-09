@@ -35,6 +35,20 @@ This will:
 - Install a LaunchDaemon to `/Library/LaunchDaemons/`.
 - Load the service immediately.
 
+## Pausing (Re-enabling AirDrop)
+
+If you need to use AirDrop, Universal Control, or other AWDL features, you can temporarily pause the killer without stopping the service.
+
+**To Pause (Enable AirDrop):**
+```bash
+touch /tmp/kill_awdl_pause
+```
+
+**To Resume (Kill AWDL):**
+```bash
+rm /tmp/kill_awdl_pause
+```
+
 ## Uninstallation
 
 To remove the daemon and the binary:
