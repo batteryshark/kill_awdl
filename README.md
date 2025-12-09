@@ -14,20 +14,32 @@ macOS frequently re-enables this interface automatically. This utility monitors 
 - **Fast Response**: Checks interface state every 100ms.
 - **Direct Kernel Interaction**: Uses `ioctl` sockets for maximum efficiency, avoiding expensive shell command spawning.
 
-## Compilation
+## Installation (The "Hardcore" Way)
 
-Compile the program using `clang`:
+To install this as a system-level daemon that runs automatically at boot (and restarts if it crashes):
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/batteryshark/kill_awdl.git
+   cd kill_awdl
+   ```
+
+2. Run the install script:
+   ```bash
+   sudo ./install.sh
+   ```
+
+This will:
+- Compile the program.
+- Install the binary to `/usr/local/bin/kill_awdl`.
+- Install a LaunchDaemon to `/Library/LaunchDaemons/`.
+- Load the service immediately.
+
+## Manual Usage
+
+If you prefer not to install it permanently, you can compile and run it manually:
 
 ```bash
 clang -O3 -o kill_awdl kill_awdl.c
-```
-
-## Usage
-
-Run the executable with `sudo` (required to control network interfaces):
-
-```bash
 sudo ./kill_awdl
 ```
-
-Keep the terminal window open, or run it in a `tmux`/`screen` session to keep it active in the background.

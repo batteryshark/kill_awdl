@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.batteryshark.kill_awdl</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/usr/local/bin/kill_awdl</string>
+    </array>
+    <key>KeepAlive</key>
+    <true/>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>StandardErrorPath</key>
+    <string>/tmp/kill_awdl.err</string>
+    <key>StandardOutPath</key>
+    <string>/tmp/kill_awdl.out</string>
+</dict>
+</plist>
