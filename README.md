@@ -14,9 +14,9 @@ macOS frequently re-enables this interface automatically. This utility monitors 
 - **Fast Response**: Checks interface state every 100ms.
 - **Direct Kernel Interaction**: Uses `ioctl` sockets for maximum efficiency, avoiding expensive shell command spawning.
 
-## Installation (The "Hardcore" Way)
+## Installation (System Daemon)
 
-To install this as a system-level daemon that runs automatically at boot (and restarts if it crashes):
+Optionally, you can install this as a system-level daemon that runs automatically at boot and restarts if it crashes:
 
 1. Clone the repository:
    ```bash
