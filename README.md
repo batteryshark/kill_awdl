@@ -35,6 +35,14 @@ This will:
 - Install a LaunchDaemon to `/Library/LaunchDaemons/`.
 - Load the service immediately.
 
+## Uninstallation
+
+To remove the daemon and the binary:
+
+```bash
+sudo ./uninstall.sh
+```
+
 ## Manual Usage
 
 If you prefer not to install it permanently, you can compile and run it manually:
